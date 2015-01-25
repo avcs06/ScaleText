@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Scale Text</title>
+	
+    <link href="https://netdna.bootstrapcdn.com/bootstrap/2.3.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/scaleText.css" rel="stylesheet">
+	<link rel="stylesheet" href="css/main.css">
+  </head>
+  <body>
+	<div id="fixedElement">
+		<p class="scale" style="line-height:60px;">position : fixed , width : auto</p>
+	</div>
+	<div id="absoluteElement" class="scale">position : absolute , width : auto</div>
+	<div id="fixedwidth" class="scale">
+		position : fixed , width : 640px
+	</div>
+	<div id="absolutewidth">
+		<p class="scale" style="line-height:60px;">position : absolute , width : 640px</p>
+	</div>
+	<div class="row-fluid">
+		<div class="span4 bootscale2-4 floated scale">
+			<span class="fa fa-fighter-jet"></span> Floated Elements
+		</div>
+		<div class="span4 bootscale2-4 floated scale">
+			<span class="fa fa-fighter-jet"></span> Bootstrap Columns
+		</div>
+		<div class="span4 bootscale2-4 floated scale">
+			<span class="fa fa-fighter-jet"></span> with Inline Icon
+		</div>
+	</div>
+	<div class="clearfix" style="margin-bottom:1px;">
+		<div class="pull-left white" style="font-size:30px;padding:0 20px;"><p class="scale">Float:left , width:auto ; </p></div>
+		<div class="pull-right scale black" style="font-size:30px;padding:0 20px;">Float:right , width:auto ; </div>
+	</div>
+	<div class="clearfix">
+		<div class="pull-left white scale" style="width:640px;font-size:30px;padding:0 20px;">Float:left , width:640px ; </div>
+		<div class="pull-right black" style="width:640px;font-size:30px;padding:0 20px;"><p class="scale">Float:right , width:640px ; </p></div>
+	</div>
+	<h2 class="scale" style="width:80%;margin:auto;">Test Details</h2>
+	<table style="width:80%;margin:auto;">
+		<thead>
+			<tr>
+				<th>Test Type</th>
+				<th>Tested</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>Fixed Position, auto width</td>
+				<td>Yes</td>
+			</tr>
+			<tr>
+				<td>Fixed Position, fixed width</td>
+				<td>Yes</td>
+			</tr>
+			<tr>
+				<td>Absolute Position, auto width</td>
+				<td>Yes</td>
+			</tr>
+			<tr>
+				<td>Absolute Position, Fixed width</td>
+				<td>Yes</td>
+			</tr>
+			<tr>
+				<td>Floated Elements</td>
+				<td>Yes</td>
+			</tr>
+			<tr>
+				<td>Inline Elements</td>
+				<td>Yes</td>
+			</tr>
+			<tr>
+				<td>Table Elements</td>
+				<td>Yes</td>
+			</tr>
+			<tr>
+				<td>Bootstrap3 Columns</td>
+				<td>Yes</td>
+			</tr>
+			<tr>
+				<td>Bootstrap2 Columns</td>
+				<td>Yes</td>
+			</tr>
+			<tr>
+				<td>Chrome</td>
+				<td>Yes</td>
+			</tr>
+			<tr>
+				<td>Firefox</td>
+				<td>Yes</td>
+			</tr>
+			<tr>
+				<td>IE</td>
+				<td>Yes</td>
+			</tr>
+			<tr>
+				<td>Opera</td>
+				<td>Yes</td>
+			</tr>
+			<tr>
+				<td>Safari</td>
+				<td>Yes</td>
+			</tr>
+		</tbody>
+	</table>
+    <script src="js/jquery.js"></script>
+    <script src="https://netdna.bootstrapcdn.com/bootstrap/2.3.2/js/bootstrap.min.js"></script>
+    <script src="js/scaleText.js"></script>
+	<script src="js/main.js"></script>
+  </body>
+</html>
