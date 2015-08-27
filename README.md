@@ -1,37 +1,44 @@
 # scaleText
 ScaleText preserves the aspect ratio of Typography still maintaining readability. One doesn’t need to write media queries for scaling text anymore. ScaleText removes code smells and handles font size dynamically in a webpage for any type of display, be it Smartphone or Tablet or Laptop.
+
 # Documentation & Demo
 Please <a href="http://avcs-tips.com/scaletext/">click here</a> for Documentation and Demo of scaleText.
+
 # Installation
 
 Include the js file in your page before ending body tag.
 
 If you are using Bootstrap 2 or Bootstrap 3, you will have to include the css file in your page before ending head tag.
 
-You need to include jquery file in the page for ScaleText to work.
+# Dependency
 
-# How to use and why should I use scaleText?
+JQuery
 
-# Easy to implement : 
+# How to and why should I use scaleText?
+
+### Easy to implement : 
 All you have to do is include scaleText.js in your page. Design your page for a fixed screen size like you usually do, but you don’t have to write any media queries for font-size. Then initialize the plugin for all the elements you want to scale. But please do keep in mind that you have to pass the top level container and the width of it, for which you have designed your page.
 <blockquote><strong>Example:</strong>
 Top level container for this page is 'body' and  I have designed this page for 1349px.
 Now I want to scale all p elements in this page.
 <pre>$('p').scaleText( { container : 'body' , initialWidth : 1349  } );</pre>
 </blockquote>
-# Support for Bootstrap Columns : 
+### Support for Bootstrap Columns : 
 If you are using Bootstrap and you want to scale text which is inside a Bootstrap column, you have to add an extra class <strong>bootscale{version}-{column width}</strong> for those columns and include <strong>scaleText.css</strong> file in the page.
 <blockquote><strong>Example:</strong>
 <pre>Bootstrap 3:  col-md-2 bootscale3-2</pre>
 <pre>Bootstrap 2:  span2 bootscale2-2</pre>
 </blockquote>
-# Generalized : 
+### Generalized : 
 It works for all types of elements, be it table, inline, block, floated or positioned.<br/>Font-size calculation is based directly on the element width ( or width of closest block element in case the element takes only content width) instead of screen width.
 # Scaling independent of screen size : 
 You can scale anytime you want independent of window’s resize event using the api function <strong>$.scaleText()</strong> . You can pass an element as parameter to this function and it will scale only children of that element. If no parameter is passed it will scale all the elements in the page.
 PS: Elements have to be initialized before, for this function to work.
 <blockquote><strong>Example:</strong>
-<pre>$.scaleText(); / $.scaleText('body');</pre></blockquote>
+<pre>
+$.scaleText(); / $.scaleText('body');
+</pre>
+</blockquote>
 # API
 <table>
    <thead>
@@ -64,3 +71,22 @@ PS: Elements have to be initialized before, for this function to work.
      </tr>
     </tbody>
 </table>
+
+# Example
+<blockquote>Include scaleText.js file in the page.
+<pre><xmp><script src="../js/scaleText.js"></script></xmp></pre>
+Initialize scaleText function on all the elements you want to scale
+<pre>
+$('.mainContent,li,blockquote,h2,h3,.page-title,td,th').scaleText({
+    container : 'body' ,
+    initialWidth : 1349,
+    minFont : 10
+});
+</pre>
+Call the $.scaleText() function to scale text independent of window's resize event.
+<pre>
+$(selector).click(function() {
+    $.scaleText();
+});
+</pre>
+</blockquote>
