@@ -31,7 +31,7 @@ If you are using Bootstrap and you want to scale text which is inside a Bootstra
 </blockquote>
 ### Generalized : 
 It works for all types of elements, be it table, inline, block, floated or positioned.<br/>Font-size calculation is based directly on the element width ( or width of closest block element in case the element takes only content width) instead of screen width.
-# Scaling independent of screen size : 
+### Scaling independent of screen size : 
 You can scale anytime you want independent of window’s resize event using the api function <strong>$.scaleText()</strong> . You can pass an element as parameter to this function and it will scale only children of that element. If no parameter is passed it will scale all the elements in the page.
 PS: Elements have to be initialized before, for this function to work.
 <blockquote><strong>Example:</strong>
